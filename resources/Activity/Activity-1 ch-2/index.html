@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<style>
+body {
+	background-image: url('img/444.png');
+	background-attachment:fixed;
+	background-position:center;
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; 
+}
+
+
+
+h2 {
+	background: #d1ff9b;
+	margin-top: 10px;
+	border: 2px solid #468201;
+	padding: 15px; 
+	border-radius:20px;
+	text-align: center;
+	font-weight: bold;
+	width:70%;
+}
+
+.block {
+	display: block;
+	width:100%;
+	border: none;
+	margin-top: 20px;
+	border-radius:20px;
+	background: #569E00;
+	color:white;			
+	box-shadow:2px 2px 1px #468201;
+	font-family: roboto;
+	padding: 14px 28px;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.block1 {
+	display: block;
+	width:70%;
+	border: none;
+	margin-top: 20px;
+	margin-left: 50px;
+	border-radius:20px;
+	border:2px solid;
+	font-family: roboto;
+	padding: 14px 28px;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+}
+b{
+color:red;
+}
+.tt {
+	border: 2px solid #468201;
+	background: #d1ff9b;
+	margin: 20px;
+	border-radius:20px;
+	box-shadow:5px 5px 5px #468201;
+	padding: 20px;
+	font-weight:bold;
+	font-size: 22px;
+	
+}
+.clothes{
+-webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  border-radius:30px;
+  border:2px solid green;
+  margin-top:10px;
+}
+.hidden {
+	display: none
+}
+</style>
+</head>
+
+<body>
+	<center><h2>My Clothes</h2>
+    <h2>Choose the correct name of each cloth given in the pictures :</h2></center><br>
+	
+    <div class="container tab1">
+	<div class="row">
+		<div class="col-md-6">	
+        <div class="row tt"> 
+            <div class="col-md-9" style="margin:auto; text-align:center; padding:10px;"> <img src="img/7.png" style="width:70%;" class="clothes"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="correct(7)" id="correct7">Coat</button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="wrong(17)" id="wrong17">Trouser</button>
+            </div>
+        </div>                      
+        </div>
+		<div class="col-md-6">		
+        <div class="row tt"> 
+            <div class="col-md-9" style="margin:auto; text-align:center; padding:10px;"> <img src="img/8.png" style="width:70%;" class="clothes"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="correct(8)" id="correct8">Shirt</button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="wrong(18)" id="wrong18">Kurta</button>
+            </div>
+        </div>                      
+        </div>
+		<div class="col-md-6">
+        <div class="row tt"> 
+            <div class="col-md-9" style="margin:auto; text-align:center; padding:10px;"> <img src="img/1.png" style="width:70%;" class="clothes"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="wrong(11)" id="wrong11">Tie</button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="correct(1)" id="correct1">Belt</button>
+            </div>
+        </div>           
+        </div>
+		<div class="col-md-6">	
+        <div class="row tt"> 
+            <div class="col-md-9" style="margin:auto; text-align:center; padding:10px;"> <img src="img/2.png" style="width:70%;" class="clothes"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="wrong(12)" id="wrong12">Shoes</button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="correct(2)" id="correct2">Socks</button>
+            </div>
+        </div>
+        </div>
+		<div class="col-md-6">	
+        <div class="row tt">    
+            <div class="col-md-9" style="margin:auto; text-align:center; padding:10px;"> <img src="img/3.png" style="width:70%;" class="clothes"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="correct(3)" id="correct3">Kurta</button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="wrong(13)" id="wrong13">Jacket </button>
+            </div>
+        </div>                       
+        </div> 
+		<div class="col-md-6">			
+        <div class="row tt"> 
+            <div class="col-md-9" style="margin:auto; text-align:center; padding:10px;"> <img src="img/4.png" style="width:70%;" class="clothes"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="wrong(14)" id="wrong14">Jeans</button>
+            </div>
+			<div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="correct(4)" id="correct4">Pants</button>
+            </div>
+        </div>                       
+        </div>   
+		<div class="col-md-6">	
+        <div class="row tt"> 
+            <div class="col-md-9" style="margin:auto; text-align:center; padding:10px;"> <img src="img/5.png" style="width:70%;" class="clothes"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="wrong(15)" id="wrong15">Shoes</button>
+            </div>
+			<div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="correct(5)" id="correct5">Saree</button>
+            </div>
+        </div>                       
+        </div> 
+		<div class="col-md-6">			
+        <div class="row tt"> 
+            <div class="col-md-9" style="margin:auto; text-align:center; padding:10px;"> <img src="img/6.png" style="width:70%;" class="clothes"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="correct(6)" id="correct6">Frock</button>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <button class="block" onclick="wrong(16)" id="wrong16">Skirt</button>
+            </div>
+        </div>                       
+        </div>
+    </div>
+	    <div class="row">
+			<div class="col-md-4"><center><img id="" onclick="window.location.reload()" src="img/res2.png" onmouseover="this.src='img/res1.png'" onmouseout="this.src='img/res2.png'" style="margin-top:10px; width:60%;"></center></div>
+			<div class="col-md-4"><center><img id="submit" onclick="done()" src="img/sub2.png" onmouseover="this.src='img/sub1.png'" onmouseout="this.src='img/sub2.png'" style="margin-top:10px; width:60%;"></center></div>
+			<div class="col-md-4"><center><img id="sol"  onclick="show()" src="img/solu2.png" onmouseover="this.src='img/solu1.png'" onmouseout="this.src='img/solu2.png'" style="margin-top:10px; width:60%;"></center></div>
+		</div>
+		<br>
+		
+		<br>
+		<br>
+    </div>
+	<div class="tab2 hidden" >
+        <center> <img height="auto" width="100%" src="img/Welldone.gif"></center>
+    </div>
+    <audio id="audio2" src="audio/try-again.mp3"></audio>
+    <audio id="audio1" src="audio/well-done.mp3"></audio>
+
+    <script>
+function yes() {
+	var audio = document.getElementById('s1');
+	audio.play();
+}
+function wrong(a) {
+	var audio = document.getElementById('audio2');
+	audio.play();
+	$('#wrong' + a).css('background', 'red');
+}
+var i, j, k, l, m, n, o, p;
+
+function correct(a) {
+var audio = document.getElementById('audio1');
+audio.play();
+var b = a+10;
+
+	if (a == 1) {
+		i = 1;
+	}
+	if (a == 2) {
+		j = 1;
+	}
+	if (a == 3) {
+		k = 1;
+	}
+	if (a == 4) {
+		l = 1;
+	}
+	if (a == 5) {
+		m = 1;
+	}
+	if (a == 6) {
+		n = 1;
+	}
+	if (a == 7) {
+		o = 1;
+	}
+	if (a == 8) {
+		p = 1;
+	}
+
+	$('#wrong' + b).attr('disabled', true);
+	$('#correct' + a).css('background', '#005b00');
+	$('#correct' + a).css('color', 'white');
+   
+}
+
+function done(){
+if(i == 1 && j == 1 && k == 1 && l == 1 && m == 1 && n == 1 && o == 1 && p == 1 ){
+var audio = document.getElementById('audio1');
+audio.play();
+setInterval(function() {
+	$('.tab1').addClass('hidden');
+	$('h2').addClass('hidden');
+	$('.tab2').removeClass('hidden');
+}, 1000);
+}
+else{
+var audio = document.getElementById('audio2');
+audio.play();
+}
+}
+
+function show(){
+$("#submit").css("pointer-events", "none");
+$('#correct1').css('background','#005b00');
+$('#correct2').css('background','#005b00');
+$('#correct3').css('background','#005b00');
+$('#correct4').css('background','#005b00');
+$('#correct5').css('background','#005b00');
+$('#correct6').css('background','#005b00');
+$('#correct7').css('background','#005b00');
+$('#correct8').css('background','#005b00');
+}
+    </script>
+</body>
+
+</html>
